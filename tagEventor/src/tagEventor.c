@@ -298,7 +298,7 @@ tagAttachData(
           )
 {
 
-    pTag->contents = testTag;
+//    pTag->contents = testTag;
 
     /* Add interpreted data into the extensionHook */
     /* need 5 characters to show each byte in HEX '0x00 ' */
