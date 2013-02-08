@@ -1,0 +1,21 @@
+#! /bin/sh
+# /etc/init.d/tageventor
+#
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Starting tagEventor"
+    /usr/bin/tagEventor -p 250 -d start -v 1
+    ;;
+  stop)
+    echo "Stopping tagEventor"
+    /usr/bin/tagEventor -d stop
+    ;;
+  *)
+    echo "Usage: /etc/init.d/tageventor {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0

@@ -623,6 +623,8 @@ int main(
         case START_DAEMON:
             /* will fork a daemon and return if successful */
             daemonize( &readerManager );
+            while ( tagListCheck( pollCallback ) )
+                usleep(appPollDelayms * 1000);
             break;
         case STOP_DAEMON:
             /* find the running daemon, kill it and exit */
